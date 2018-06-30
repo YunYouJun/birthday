@@ -24,6 +24,6 @@
     "build": "webpack --progress --colors",
     "watch": "webpack --watch --colors",
     "predeploy": "yarn build",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d public"
   }
 }
