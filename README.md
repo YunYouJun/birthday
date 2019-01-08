@@ -8,8 +8,30 @@ Happy Birthday To You.
 
 ## Use
 
-`yarn`  Install
+### Setup
 
-`yarn build` Build js & css
+```sh
+yarn install
+```
 
-`yarn start` View in `http://localhost:8080`
+### Build
+
+```sh
+yarn build
+```
+
+### View
+
+```sh
+# http://localhost:8080
+yarn serve
+```
+
+## Change Log
+
+- 2019.01.08 | Use vue rewrite
+
+## Intend
+
+- [ ] 根据链接后缀显示名字
+- [ ] 根据 LeanCloud 获取存储显示名字
