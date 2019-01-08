@@ -33,5 +33,6 @@ yarn serve
 
 ## Intend
 
+- [ ] 继续拆分组件 Vue
 - [ ] 根据链接后缀显示名字
 - [ ] 根据 LeanCloud 获取存储显示名字

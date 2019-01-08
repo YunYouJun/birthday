@@ -11,7 +11,7 @@
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
     "predeploy": "yarn build",
-    "deploy": "gh-pages -d public"
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "register-service-worker": "^1.5.2",

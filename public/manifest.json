@@ -1,6 +1,6 @@
 {
-  "name": "birthday",
-  "short_name": "birth",
+  "name": "Happy Birthday!",
+  "short_name": "Birth",
   "icons": [
     {
       "src": "./img/icons/android-chrome-192x192.png",

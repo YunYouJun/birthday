@@ -5,8 +5,11 @@ import './registerServiceWorker'
 
 Vue.config.productionTip = false
 
-// import '@/assets/js/bubble.js'
 import '@/assets/js/egg.js'
+
+// css
+import '@/assets/scss/reset.css'
+import '@/assets/scss/style.scss'
 
 new Vue({
   router,
