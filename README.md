@@ -8,6 +8,19 @@ Happy Birthday To You.
 
 ## Use
 
+If you in <https://github.yunyoujun.cn/birthday/?name=World&msg=Hello>,
+then you can see in this page.
+
+```word
+World
+Hello
+```
+
+| Prop | Type   | Description | Default
+| ---  | ---    | ---         | ---
+| name | String | who you want to greet | null
+| msg  | String | what you want to say | Happy Birthday!
+
 ### Setup
 
 ```sh
@@ -33,6 +46,5 @@ yarn serve
 
 ## Intend
 
-- [ ] 继续拆分组件 Vue
 - [ ] 根据链接后缀显示名字
 - [ ] 根据 LeanCloud 获取存储显示名字

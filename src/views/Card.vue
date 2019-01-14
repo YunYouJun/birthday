@@ -1,11 +1,11 @@
 <template>
-  <div class="home">
+  <div class="card">
     <div id="bg">
       <canvas></canvas>
       <canvas></canvas>
       <canvas></canvas>
     </div>
-    <BirthdayCake :name="name"/>
+    <BirthdayCake :name="name" :msg="msg"/>
   </div>
 </template>
 
@@ -15,13 +15,14 @@ import BirthdayCake from '@/components/BirthdayCake.vue'
 import bubble from '@/assets/js/bubble.js'
 
 export default {
-  name: 'home',
+  name: 'card',
   components: {
     BirthdayCake
   },
   data () {
     return {
-      name: ''
+      name: this.$route.query.name,
+      msg: this.$route.query.msg
     }
   },
   mounted () {
