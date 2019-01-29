@@ -10,7 +10,7 @@ Happy Birthday To You!
 
 ## Use
 
-If you in <https://github.yunyoujun.cn/birthday/?name=World&msg=Hello>,
+If you in <https://yunyoujun.github.io/birthday/?name=World&msg=Hello>,
 then you can see in this page.
 
 ```word
