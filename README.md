@@ -1,6 +1,8 @@
 # birthday
 
-Happy Birthday To You.
+[![Build Status](https://travis-ci.org/YunYouJun/birthday.svg?branch=master)](https://travis-ci.org/YunYouJun/birthday)
+
+Happy Birthday To You!
 
 ## Base
 
@@ -43,8 +45,3 @@ yarn serve
 ## Change Log
 
 - 2019.01.08 | Use vue rewrite
-
-## Intend
-
-- [ ] 根据链接后缀显示名字
-- [ ] 根据 LeanCloud 获取存储显示名字
