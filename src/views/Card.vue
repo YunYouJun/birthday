@@ -1,5 +1,5 @@
 <template>
-  <div class="card">
+  <div class="card" @click="playMusic">
     <div id="bg">
       <canvas></canvas>
       <canvas></canvas>
@@ -7,7 +7,7 @@
     </div>
     <BirthdayCake />
     <BestWish :name="name" :msg="msg" />
-    <audio src="../assets/audio/happy-birthday.mp3" autoplay loop>
+    <audio ref="music" src="../assets/audio/happy-birthday.mp3" autoplay loop>
       您的浏览器不支持 audio 标签。
     </audio>
   </div>
@@ -33,6 +33,11 @@ export default {
   },
   mounted() {
     bubble();
+  },
+  methods: {
+    playMusic() {
+      this.$refs.music.play();
+    }
   }
 };
 </script>
