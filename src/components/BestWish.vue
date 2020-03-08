@@ -8,7 +8,7 @@
 <style lang="scss">
 .text {
   color: #8b6a60;
-  font-family: "Lato", sans-serif;
+  font-family: "Lato", "Roboto" sans-serif;
   text-align: center;
   h1 {
     font-weight: lighter;
