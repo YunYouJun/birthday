@@ -1,38 +1,35 @@
 # birthday
 
-[![Build Status](https://travis-ci.org/YunYouJun/birthday.svg?branch=master)](https://travis-ci.org/YunYouJun/birthday)
+[![gh-pages](https://github.com/YunYouJun/birthday/workflows/gh-pages/badge.svg)](https://github.com/YunYouJun/birthday/actions)
 
 Happy Birthday To You!
 
-## Base
-
-[Codepen-Cake](https://codepen.io/fixcl/pen/nKFDr)
-
 ## Use
 
-If you in <https://yunyoujun.github.io/birthday/?name=World&msg=Hello>,
-then you can see in this page.
+If you in <https://yunyoujun.github.io/birthday/?name=World&msg=Hello>, then you can see in this page.
 
-```word
+```txt
 World
 Hello
 ```
 
-| Prop | Type   | Description | Default
-| ---  | ---    | ---         | ---
-| name | String | who you want to greet | null
-| msg  | String | what you want to say | Happy Birthday!
+| Prop | Type   | Description           | Default         |
+| ---- | ------ | --------------------- | --------------- |
+| name | String | who you want to greet | null            |
+| msg  | String | what you want to say  | Happy Birthday! |
 
 ### Setup
 
 ```sh
-yarn install
+yarn
+# npm run install
 ```
 
 ### Build
 
 ```sh
 yarn build
+# npm run build
 ```
 
 ### View
@@ -40,7 +37,12 @@ yarn build
 ```sh
 # http://localhost:8080
 yarn serve
+# npm run serve
 ```
+
+## Reference
+
+[Codepen-Cake](https://codepen.io/fixcl/pen/nKFDr)
 
 ## Change Log
 
