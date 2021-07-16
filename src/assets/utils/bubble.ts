@@ -1,33 +1,28 @@
-// replace jQuery
-function each(obj, callback) {
-  let length,
-    i = 0;
-
-  length = obj.length;
-  for (; i < length; i++) {
-    if (callback.call(obj[i], i, obj[i]) === false) {
-      break;
-    }
-  }
-
-  return obj;
+interface Circle {
+  x: number;
+  y: number;
+  radius: number;
+  speed: number;
+  color: number[];
+  alpha: number;
 }
 
-// window.$ = HTMLElement.prototype.$ = function(selector) {
-// let elems = (this == window ? document : this).querySelectorAll(selector);
-// return elems.length == 0 ? null : elems.length == 1 ? elems[0] : elems;
-// };
-
-let $ = function(selector) {
-  let elems = document.querySelectorAll(selector);
-  return elems.length == 0 ? null : elems.length == 1 ? elems[0] : elems;
-};
+interface Line {
+  x: number;
+  y: number;
+  width: number;
+  speed: number;
+  color: number[];
+  alpha: number;
+}
 
 // -------
 // Bubble Function Code
 
-function bubble() {
-  let canvas = $("#bg").children,
+function bubble(): void {
+  const canvas = document.querySelectorAll(
+      "#bg"
+    ) as NodeListOf<HTMLCanvasElement>,
     background = canvas[0],
     foreground1 = canvas[1],
     foreground2 = canvas[2],
@@ -36,29 +31,33 @@ function bubble() {
         amount: 15,
         layer: 3,
         color: [255, 255, 255],
-        alpha: 0.3
+        alpha: 0.3,
       },
       line: {
         amount: 12,
         layer: 3,
         color: [255, 255, 255],
-        alpha: 0.3
+        alpha: 0.3,
       },
       speed: 0.5,
-      angle: 20
+      angle: 20,
     };
 
   if (background.getContext) {
-    let bctx = background.getContext("2d"),
-      fctx1 = foreground1.getContext("2d"),
-      fctx2 = foreground2.getContext("2d"),
-      M = window.Math, // Cached Math
-      degree = (config.angle / 360) * M.PI * 2,
-      circles = [],
-      lines = [],
-      wWidth,
-      wHeight,
-      timer;
+    const bctx = background.getContext("2d");
+    const fctx1 = foreground1.getContext("2d");
+    const fctx2 = foreground2.getContext("2d");
+    const M = window.Math; // Cached Math
+    const degree = (config.angle / 360) * M.PI * 2;
+    let circles: Circle[] = [];
+    let lines: Line[] = [];
+    let wWidth: number;
+    let wHeight: number;
+    let timer: number;
+
+    if (!bctx || !fctx1 || !fctx2) {
+      return;
+    }
 
     // requestAnimationFrame = window.requestAnimationFrame ||
     // 	window.mozRequestAnimationFrame ||
@@ -74,7 +73,7 @@ function bubble() {
     // 	window.oCancelAnimationFrame ||
     // 	clearTimeout;
 
-    let setCanvasHeight = function() {
+    const setCanvasHeight = function () {
       // wWidth = $(window).width();
       // wHeight = $(window).height(),
       wWidth = window.innerWidth;
@@ -83,14 +82,20 @@ function bubble() {
         // 	this.width = wWidth;
         // 	this.height = wHeight;
         // });
-        each(canvas, function() {
-          this.width = wWidth;
-          this.height = wHeight;
+        canvas.forEach((item: HTMLCanvasElement) => {
+          item.width = wWidth;
+          item.height = wHeight;
         });
     };
 
-    let drawCircle = function(x, y, radius, color, alpha) {
-      let gradient = fctx1.createRadialGradient(x, y, radius, x, y, 0);
+    const drawCircle = function (
+      x: number,
+      y: number,
+      radius: number,
+      color: number[],
+      alpha: number
+    ) {
+      const gradient = fctx1.createRadialGradient(x, y, radius, x, y, 0);
       gradient.addColorStop(
         0,
         "rgba(" + color[0] + "," + color[1] + "," + color[2] + "," + alpha + ")"
@@ -114,8 +119,14 @@ function bubble() {
       fctx1.fill();
     };
 
-    let drawLine = function(x, y, width, color, alpha) {
-      let endX = x + M.sin(degree) * width,
+    const drawLine = function (
+      x: number,
+      y: number,
+      width: number,
+      color: number[],
+      alpha: number
+    ) {
+      const endX = x + M.sin(degree) * width,
         endY = y - M.cos(degree) * width,
         gradient = fctx2.createLinearGradient(x, y, endX, endY);
       gradient.addColorStop(
@@ -144,10 +155,10 @@ function bubble() {
       fctx2.stroke();
     };
 
-    let drawBack = function() {
+    const drawBack = function () {
       bctx.clearRect(0, 0, wWidth, wHeight);
 
-      let gradient = [];
+      const gradient = [];
 
       gradient[0] = bctx.createRadialGradient(
         wWidth * 0.3,
@@ -199,18 +210,19 @@ function bubble() {
       bctx.fillRect(0, 0, wWidth, wHeight);
     };
 
-    let animate = function() {
-      let sin = M.sin(degree),
+    const animate = function () {
+      const sin = M.sin(degree),
         cos = M.cos(degree);
 
       if (config.circle.amount > 0 && config.circle.layer > 0) {
+        if (!fctx1) return;
         fctx1.clearRect(0, 0, wWidth, wHeight);
         for (let i = 0, len = circles.length; i < len; i++) {
-          let item = circles[i],
-            x = item.x,
-            y = item.y,
-            radius = item.radius,
-            speed = item.speed;
+          const item = circles[i];
+          let x = item.x;
+          let y = item.y;
+          const radius = item.radius;
+          const speed = item.speed;
 
           if (x > wWidth + radius) {
             x = -radius;
@@ -235,13 +247,14 @@ function bubble() {
       }
 
       if (config.line.amount > 0 && config.line.layer > 0) {
+        if (!fctx2) return;
         fctx2.clearRect(0, 0, wWidth, wHeight);
         for (let j = 0, len = lines.length; j < len; j++) {
-          let item = lines[j],
-            x = item.x,
-            y = item.y,
-            width = item.width,
-            speed = item.speed;
+          const item = lines[j];
+          let x = item.x;
+          let y = item.y;
+          const width = item.width;
+          const speed = item.speed;
 
           if (x > wWidth + width * sin) {
             x = -width * sin;
@@ -268,7 +281,7 @@ function bubble() {
       timer = requestAnimationFrame(animate);
     };
 
-    let createItem = function() {
+    const createItem = function () {
       circles = [];
       lines = [];
 
@@ -281,7 +294,7 @@ function bubble() {
               radius: M.random() * (20 + j * 5) + (20 + j * 5),
               color: config.circle.color,
               alpha: M.random() * 0.2 + (config.circle.alpha - j * 0.1),
-              speed: config.speed * (1 + j * 0.5)
+              speed: config.speed * (1 + j * 0.5),
             });
           }
         }
@@ -296,7 +309,7 @@ function bubble() {
               width: M.random() * (20 + n * 5) + (20 + n * 5),
               color: config.line.color,
               alpha: M.random() * 0.2 + (config.line.alpha - n * 0.1),
-              speed: config.speed * (1 + n * 0.5)
+              speed: config.speed * (1 + n * 0.5),
             });
           }
         }
@@ -315,11 +328,11 @@ function bubble() {
     // 	setCanvasHeight();
     // 	createItem();
     // });
-    window.onload = function() {
+    window.onload = function () {
       setCanvasHeight();
       createItem();
     };
-    window.onresize = function() {
+    window.onresize = function () {
       setCanvasHeight();
       createItem();
     };

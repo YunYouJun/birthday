@@ -7,39 +7,62 @@
     </div>
     <BirthdayCake />
     <BestWish :name="name" :msg="msg" />
-    <audio ref="music" src="../assets/audio/happy-birthday.mp3" autoplay loop>
+    <audio
+      ref="music"
+      :src="`${publicPath}audio/happy-birthday.mp3`"
+      autoplay
+      loop
+    >
       您的浏览器不支持 audio 标签。
     </audio>
   </div>
 </template>
 
-<script>
-// @ is an alias to /src
+<script lang="ts">
+import { defineComponent, onMounted, ref } from "vue";
+
 import BirthdayCake from "@/components/BirthdayCake.vue";
 import BestWish from "@/components/BestWish.vue";
-import bubble from "@/assets/js/bubble.js";
+import bubble from "@/assets/utils/bubble";
 
-export default {
+import { useRoute } from "vue-router";
+
+export default defineComponent({
   name: "card",
   components: {
     BirthdayCake,
-    BestWish
+    BestWish,
   },
   data() {
     return {
-      name: this.$route.query.name,
-      msg: this.$route.query.msg
+      publicPath: process.env.BASE_URL,
     };
   },
-  mounted() {
-    bubble();
-  },
-  methods: {
-    playMusic() {
-      this.$refs.music.play();
+  setup() {
+    const route = useRoute();
+    const name = route.query.name as string;
+    const msg = route.query.msg as string;
+
+    const music = ref<HTMLAudioElement | null>(null);
+
+    function playMusic() {
+      music.value?.play();
     }
-  }
-};
+
+    onMounted(() => {
+      bubble();
+    });
+
+    return {
+      name,
+      msg,
+
+      music,
+
+      playMusic,
+    };
+  },
+});
 </script>
 
 <style lang="scss" scoped>

@@ -239,7 +239,7 @@
       <rect x="10" y="475.571" fill="#fefae9" width="180" height="4" />
     </svg>
 
-    <div style="text-align:center;clear:both"></div>
+    <div style="text-align: center; clear: both"></div>
   </div>
 </template>
 

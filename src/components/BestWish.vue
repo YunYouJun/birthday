@@ -27,18 +27,20 @@
 }
 </style>
 
-<script>
-export default {
+<script lang="ts">
+import { defineComponent } from "vue";
+
+export default defineComponent({
   name: "BestWish",
   props: {
     name: {
       default: "You",
-      type: String
+      type: String,
     },
     msg: {
       default: "Happy Birthday!",
-      type: String
-    }
-  }
-};
+      type: String,
+    },
+  },
+});
 </script>
