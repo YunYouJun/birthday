@@ -238,8 +238,6 @@
       </path>
       <rect x="10" y="475.571" fill="#fefae9" width="180" height="4" />
     </svg>
-
-    <div style="text-align: center; clear: both"></div>
   </div>
 </template>
 
@@ -257,7 +255,7 @@
   background: #ffffff;
   border-radius: 10px;
   position: absolute;
-  top: 300px;
+  top: 340px;
   left: 50%;
   margin-left: -2.5px;
   margin-top: -8.33333333px;
@@ -266,14 +264,15 @@
   transform: translateY(-300px);
   backface-visibility: hidden;
   animation: in 500ms 6s ease-out forwards;
-}
-.velas:after,
-.velas:before {
-  background: rgba(255, 0, 0, 0.4);
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 2.22222222px;
+
+  &:after,
+  &:before {
+    background: rgba(255, 0, 0, 0.4);
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2.22222222px;
+  }
 }
 .velas:after {
   top: 25%;
