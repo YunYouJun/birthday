@@ -73,14 +73,8 @@ function bubble(): void {
     // clearTimeout;
 
     const setCanvasHeight = function() {
-      // wWidth = $(window).width();
-      // wHeight = $(window).height(),
-      wWidth = window.innerWidth;
-      (wHeight = window.innerHeight),
-      // canvas.each(function(){
-      // 	this.width = wWidth;
-      // 	this.height = wHeight;
-      // });
+      wWidth = window.innerWidth
+      wHeight = window.innerHeight
       canvas.forEach((item: HTMLCanvasElement) => {
         item.width = wWidth
         item.height = wHeight
@@ -323,14 +317,6 @@ function bubble(): void {
       drawBack()
     }
 
-    // $(document).ready(function(){
-    // 	setCanvasHeight();
-    // 	createItem();
-    // });
-    // $(window).resize(function(){
-    // 	setCanvasHeight();
-    // 	createItem();
-    // });
     window.onload = function() {
       setCanvasHeight()
       createItem()

@@ -1,9 +1,9 @@
 <template>
   <div class="card" @click="playMusic">
     <div id="bg">
-      <canvas ref="bg"></canvas>
-      <canvas ref="fg1"></canvas>
-      <canvas ref="fg2"></canvas>
+      <canvas ref="bg" />
+      <canvas ref="fg1" />
+      <canvas ref="fg2" />
     </div>
     <BirthdayCake />
     <BestWish :name="name" :msg="msg" />

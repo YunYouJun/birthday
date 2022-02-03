@@ -1,11 +1,11 @@
 <template>
   <div class="birthday">
     <div class="velas">
-      <div class="fuego"></div>
-      <div class="fuego"></div>
-      <div class="fuego"></div>
-      <div class="fuego"></div>
-      <div class="fuego"></div>
+      <div class="fuego" />
+      <div class="fuego" />
+      <div class="fuego" />
+      <div class="fuego" />
+      <div class="fuego" />
     </div>
 
     <svg
