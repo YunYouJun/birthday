@@ -6,6 +6,8 @@ declare module 'vue' {
   export interface GlobalComponents {
     BestWish: typeof import('./components/BestWish.vue')['default']
     BirthdayCake: typeof import('./components/BirthdayCake.vue')['default']
+    IMdiMusicNoteOffOutline: typeof import('~icons/mdi/music-note-off-outline')['default']
+    IMdiMusicNoteOutline: typeof import('~icons/mdi/music-note-outline')['default']
   }
 }
 

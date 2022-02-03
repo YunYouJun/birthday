@@ -1,5 +1,9 @@
 <template>
-  <div class="card" @click="playMusic">
+  <button class="music-btn absolute right-6 top-6 rounded-full" p="1" text="lg" @click="toggleBgMusic">
+    <i-mdi-music-note-outline v-if="birthdayMusic.isPlaying.value" class="animate-spin animate-slow" />
+    <i-mdi-music-note-off-outline v-else />
+  </button>
+  <div class="card" h="screen" @click="toggleBgMusic">
     <div id="bg">
       <canvas ref="bg" />
       <canvas ref="fg1" />
@@ -20,7 +24,10 @@
 
 <script lang="ts" setup>
 import { useRoute } from 'vue-router'
+import { useSound } from '@vueuse/sound'
 import bubble from '~/utils/bubble'
+
+const birthdayMusic = useSound('/audio/happy-birthday.mp3')
 
 const audioUrl = ref('/audio/happy-birthday.mp3')
 
@@ -28,13 +35,8 @@ const route = useRoute()
 const name = route.query.name as string
 const msg = route.query.msg as string
 
-const music = ref<HTMLAudioElement>()
-
-/**
- * 播放音乐
- */
-function playMusic() {
-  music.value?.play()
+const toggleBgMusic = () => {
+  birthdayMusic.isPlaying.value ? birthdayMusic.pause() : birthdayMusic.play()
 }
 
 onMounted(() => {

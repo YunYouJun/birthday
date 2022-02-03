@@ -62,3 +62,9 @@ body {
   );
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#699bc8', endColorstr='#b5c5d8',GradientType=1 );
 }
+
+// elements
+.music-btn {
+  color: var(--color-primary);
+  border: 2px solid var(--color-primary);
+}

@@ -246,7 +246,7 @@
 #cake {
   display: block;
   position: relative;
-  margin: -5em auto 0 auto;
+  margin: -4em auto 0 auto;
 }
 
 // Candle
@@ -258,10 +258,10 @@
   top: 340px;
   left: 50%;
   margin-left: -2.5px;
-  margin-top: -8.33333333px;
+  margin-top: -2rem;
   width: 5px;
   height: 35px;
-  transform: translateY(-300px);
+  transform: translateY(-350px);
   backface-visibility: hidden;
   animation: in 500ms 6s ease-out forwards;
 
