@@ -1,7 +1,7 @@
 <template>
-  <button class="music-btn absolute right-6 top-6 rounded-full" p="1" text="lg" @click="toggleBgMusic">
-    <i-mdi-music-note-outline v-if="birthdayMusic.isPlaying.value" class="animate-spin animate-slow" />
-    <i-mdi-music-note-off-outline v-else />
+  <button class="music-btn absolute right-6 top-6 rounded-full" bg="transparent" p="1" text="lg" @click="toggleBgMusic">
+    <div v-if="birthdayMusic.isPlaying.value" i-mdi-music-note-outline class="animate-spin animate-slow" />
+    <div v-else i-mdi-music-note-off-outline />
   </button>
   <div class="card" h="screen" @click="toggleBgMusic">
     <div id="bg">

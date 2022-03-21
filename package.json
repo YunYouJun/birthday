@@ -21,7 +21,7 @@
     "typecheck": "vue-tsc --noEmit"
   },
   "dependencies": {
-    "@vueuse/core": "^7.5.5",
+    "@vueuse/core": "^8.1.2",
     "@vueuse/head": "^0.7.5",
     "@vueuse/sound": "^1.1.7",
     "nprogress": "^0.2.0",
@@ -32,14 +32,13 @@
     "vue-router": "^4.0.12"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^0.16.1",
+    "@antfu/eslint-config": "^0.18.9",
     "@iconify-json/carbon": "^1.0.14",
     "@iconify-json/mdi": "^1.0.16",
     "@intlify/vite-plugin-vue-i18n": "^3.0.0",
     "@types/markdown-it-link-attributes": "^3.0.1",
     "@types/nprogress": "^0.2.0",
     "@vitejs/plugin-vue": "^2.1.0",
-    "@windicss/plugin-animations": "^1.0.9",
     "critters": "^0.0.16",
     "cross-env": "^7.0.3",
     "cypress": "^9.4.1",
@@ -51,18 +50,17 @@
     "pnpm": "^6.29.1",
     "sass": "^1.49.7",
     "typescript": "^4.5.5",
-    "unplugin-auto-import": "^0.5.11",
-    "unplugin-icons": "^0.13.0",
-    "unplugin-vue-components": "^0.17.15",
+    "unocss": "^0.29.5",
+    "unplugin-auto-import": "^0.6.6",
+    "unplugin-vue-components": "^0.18.3",
     "vite": "^2.7.13",
-    "vite-plugin-inspect": "^0.3.13",
+    "vite-plugin-inspect": "^0.4.3",
     "vite-plugin-md": "^0.11.7",
-    "vite-plugin-pages": "^0.20.1",
+    "vite-plugin-pages": "^0.22.0",
     "vite-plugin-pwa": "^0.11.13",
-    "vite-plugin-vue-layouts": "^0.5.0",
-    "vite-plugin-windicss": "^1.6.3",
-    "vite-ssg": "^0.17.9",
+    "vite-plugin-vue-layouts": "^0.6.0",
+    "vite-ssg": "^0.19.0",
     "vue": "^3.2.29",
-    "vue-tsc": "^0.31.1"
+    "vue-tsc": "^0.33.5"
   }
 }

@@ -3,7 +3,7 @@
     <h1 text="3xl" font="light" m="2">
       {{ name }}
     </h1>
-    <h2 text="3xl">
+    <h2 text="3xl" font="normal">
       {{ msg }}
     </h2>
   </div>
