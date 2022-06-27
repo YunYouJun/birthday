@@ -1,0 +1,64 @@
+{
+  "vite/modulepreload-polyfill": [],
+  "node_modules/.pnpm/@intlify+shared@9.1.10/node_modules/@intlify/shared/dist/shared.esm-bundler.js": [],
+  "node_modules/.pnpm/@intlify+message-resolver@9.1.10/node_modules/@intlify/message-resolver/dist/message-resolver.esm-bundler.js": [],
+  "node_modules/.pnpm/@intlify+runtime@9.1.10/node_modules/@intlify/runtime/dist/runtime.esm-bundler.js": [],
+  "node_modules/.pnpm/@intlify+message-compiler@9.1.10/node_modules/@intlify/message-compiler/dist/message-compiler.esm-bundler.js": [],
+  "node_modules/.pnpm/@intlify+devtools-if@9.1.10/node_modules/@intlify/devtools-if/dist/devtools-if.esm-bundler.js": [],
+  "node_modules/.pnpm/@intlify+core-base@9.1.10/node_modules/@intlify/core-base/dist/core-base.esm-bundler.js": [],
+  "node_modules/.pnpm/@vue+shared@3.2.37/node_modules/@vue/shared/dist/shared.esm-bundler.js": [],
+  "node_modules/.pnpm/@vue+reactivity@3.2.37/node_modules/@vue/reactivity/dist/reactivity.esm-bundler.js": [],
+  "node_modules/.pnpm/@vue+runtime-core@3.2.37/node_modules/@vue/runtime-core/dist/runtime-core.esm-bundler.js": [],
+  "node_modules/.pnpm/@vue+runtime-dom@3.2.37/node_modules/@vue/runtime-dom/dist/runtime-dom.esm-bundler.js": [],
+  "node_modules/.pnpm/vue-i18n@9.1.10_vue@3.2.37/node_modules/vue-i18n/dist/vue-i18n.runtime.esm-bundler.js": [],
+  "src/modules/i18n.ts": [],
+  "\u0000commonjsHelpers.js": [],
+  "\u0000/home/runner/work/birthday/birthday/node_modules/.pnpm/nprogress@0.2.0/node_modules/nprogress/nprogress.js?commonjs-module": [],
+  "node_modules/.pnpm/nprogress@0.2.0/node_modules/nprogress/nprogress.js": [],
+  "src/modules/nprogress.ts": [],
+  "node_modules/.pnpm/vue-demi@0.13.1_vue@3.2.37/node_modules/vue-demi/lib/index.mjs": [],
+  "node_modules/.pnpm/pinia@2.0.14_j6bzmzd4ujpabbp5objtwxyjp4/node_modules/pinia/dist/pinia.esm-browser.js": [],
+  "src/modules/pinia.ts": [],
+  "vite/preload-helper": [],
+  "src/modules/pwa.ts": [],
+  "node_modules/.pnpm/vue-router@4.0.16_vue@3.2.37/node_modules/vue-router/dist/vue-router.esm-bundler.js": [],
+  "node_modules/.pnpm/@vueuse+head@0.7.6_vue@3.2.37/node_modules/@vueuse/head/dist/index.mjs": [],
+  "node_modules/.pnpm/vite-ssg@0.20.1_k7shjfzctjeydlate74macei7a/node_modules/vite-ssg/dist/chunks/state.mjs": [],
+  "node_modules/.pnpm/vite-ssg@0.20.1_k7shjfzctjeydlate74macei7a/node_modules/vite-ssg/dist/chunks/ClientOnly.mjs": [],
+  "node_modules/.pnpm/vite-ssg@0.20.1_k7shjfzctjeydlate74macei7a/node_modules/vite-ssg/dist/index.mjs": [],
+  "src/components/BestWish.vue?vue&type=style&index=0&lang.scss": [],
+  "src/components/BestWish.vue": [],
+  "src/components/BirthdayCake.vue?vue&type=style&index=0&scoped=true&lang.scss": [],
+  "plugin-vue:export-helper": [],
+  "src/components/BirthdayCake.vue": [],
+  "node_modules/.pnpm/@vueuse+sound@1.1.7_vue@3.2.37/node_modules/@vueuse/sound/dist/esm/index.js": [],
+  "src/utils/bubble.ts": [],
+  "src/pages/index.vue?vue&type=style&index=0&scoped=true&lang.scss": [],
+  "src/pages/index.vue": [],
+  "../../../../../@vite-plugin-pages/generated-pages?id=virtual:generated-pages": [],
+  "src/layouts/default.vue": [],
+  "../../../../../@vite-plugin-vue-layouts/generated-layouts": [],
+  "src/App.vue": [],
+  "src/styles/vars.scss": [],
+  "src/styles/index.scss": [],
+  "../../../../../__uno.css": [],
+  "src/utils/egg.ts": [],
+  "src/main.ts": [],
+  "index.html": [],
+  "assets/app.a71fc12a.js-unocss-hash.css": [],
+  "node_modules/.pnpm/workbox-window@6.5.3/node_modules/workbox-window/build/workbox-window.prod.es5.mjs": [
+    "/assets/virtual_pwa-register.80a10119.js"
+  ],
+  "../../../../../@vite-plugin-pwa/virtual:pwa-register": [
+    "/assets/virtual_pwa-register.80a10119.js"
+  ],
+  "src/pages/about.md": [
+    "/assets/about.d1b0900e.js"
+  ],
+  "src/layouts/404.vue": [
+    "/assets/404.0bf0872d.js"
+  ],
+  "node_modules/.pnpm/@vueuse+sound@1.1.7_vue@3.2.37/node_modules/@vueuse/sound/dist/esm/howler-c6e37a5c.js": [
+    "/assets/howler-c6e37a5c.19e5fa15.js"
+  ]
+}
