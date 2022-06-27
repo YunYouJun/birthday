@@ -11,14 +11,6 @@
     </div>
     <BirthdayCake />
     <BestWish :name="name" :msg="msg" />
-    <audio
-      ref="music"
-      :src="audioUrl"
-      autoplay
-      loop
-    >
-      您的浏览器不支持 audio 标签。
-    </audio>
   </div>
 </template>
 
@@ -28,8 +20,6 @@ import { useSound } from '@vueuse/sound'
 import bubble from '~/utils/bubble'
 
 const birthdayMusic = useSound('/audio/happy-birthday.mp3')
-
-const audioUrl = ref('/audio/happy-birthday.mp3')
 
 const route = useRoute()
 const name = route.query.name as string
