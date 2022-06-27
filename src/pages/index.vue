@@ -1,19 +1,3 @@
-<template>
-  <button class="music-btn absolute right-6 top-6 rounded-full" bg="transparent" p="1" text="lg" @click="toggleBgMusic">
-    <div v-if="birthdayMusic.isPlaying.value" i-mdi-music-note-outline class="animate-spin animate-slow" />
-    <div v-else i-mdi-music-note-off-outline />
-  </button>
-  <div class="card" h="screen" @click="toggleBgMusic">
-    <div id="bg">
-      <canvas ref="bg" />
-      <canvas ref="fg1" />
-      <canvas ref="fg2" />
-    </div>
-    <BirthdayCake />
-    <BestWish :name="name" :msg="msg" />
-  </div>
-</template>
-
 <script lang="ts" setup>
 import { useRoute } from 'vue-router'
 import { useSound } from '@vueuse/sound'
@@ -33,6 +17,22 @@ onMounted(() => {
   bubble()
 })
 </script>
+
+<template>
+  <button class="music-btn absolute right-6 top-6 rounded-full" bg="transparent" p="1" text="lg" @click="toggleBgMusic">
+    <div v-if="birthdayMusic.isPlaying.value" i-mdi-music-note-outline class="animate-spin animate-slow" />
+    <div v-else i-mdi-music-note-off-outline />
+  </button>
+  <div class="card" h="screen" @click="toggleBgMusic">
+    <div id="bg">
+      <canvas ref="bg" />
+      <canvas ref="fg1" />
+      <canvas ref="fg2" />
+    </div>
+    <BirthdayCake />
+    <BestWish :name="name" :msg="msg" />
+  </div>
+</template>
 
 <style lang="scss" scoped>
 /* BACKGROUND */

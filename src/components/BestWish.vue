@@ -1,3 +1,13 @@
+<script lang="ts" setup>
+withDefaults(defineProps<{
+  name: string
+  msg: string
+}>(), {
+  name: 'You',
+  msg: 'Happy Birthday!',
+})
+</script>
+
 <template>
   <div class="wish transition animate-slow animate-fadeIn" text="center">
     <h1 text="3xl" font="light" m="2">
@@ -8,16 +18,6 @@
     </h2>
   </div>
 </template>
-
-<script lang="ts" setup>
-withDefaults(defineProps<{
-  name: string
-  msg: string
-}>(), {
-  name: 'You',
-  msg: 'Happy Birthday!',
-})
-</script>
 
 <style lang="scss">
 .wish{

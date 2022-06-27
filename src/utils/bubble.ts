@@ -72,7 +72,7 @@ function bubble(): void {
     // window.oCancelAnimationFrame ||
     // clearTimeout;
 
-    const setCanvasHeight = function() {
+    const setCanvasHeight = function () {
       wWidth = window.innerWidth
       wHeight = window.innerHeight
       canvas.forEach((item: HTMLCanvasElement) => {
@@ -81,7 +81,7 @@ function bubble(): void {
       })
     }
 
-    const drawCircle = function(
+    const drawCircle = function (
       x: number,
       y: number,
       radius: number,
@@ -112,7 +112,7 @@ function bubble(): void {
       fctx1.fill()
     }
 
-    const drawLine = function(
+    const drawLine = function (
       x: number,
       y: number,
       width: number,
@@ -148,7 +148,7 @@ function bubble(): void {
       fctx2.stroke()
     }
 
-    const drawBack = function() {
+    const drawBack = function () {
       bctx.clearRect(0, 0, wWidth, wHeight)
 
       const gradient = []
@@ -203,12 +203,13 @@ function bubble(): void {
       bctx.fillRect(0, 0, wWidth, wHeight)
     }
 
-    const animate = function() {
+    const animate = function () {
       const sin = M.sin(degree)
       const cos = M.cos(degree)
 
       if (config.circle.amount > 0 && config.circle.layer > 0) {
-        if (!fctx1) return
+        if (!fctx1)
+          return
         fctx1.clearRect(0, 0, wWidth, wHeight)
         for (let i = 0, len = circles.length; i < len; i++) {
           const item = circles[i]
@@ -242,7 +243,8 @@ function bubble(): void {
       }
 
       if (config.line.amount > 0 && config.line.layer > 0) {
-        if (!fctx2) return
+        if (!fctx2)
+          return
         fctx2.clearRect(0, 0, wWidth, wHeight)
         for (let j = 0, len = lines.length; j < len; j++) {
           const item = lines[j]
@@ -278,7 +280,7 @@ function bubble(): void {
       timer = requestAnimationFrame(animate)
     }
 
-    const createItem = function() {
+    const createItem = function () {
       circles = []
       lines = []
 
@@ -317,11 +319,11 @@ function bubble(): void {
       drawBack()
     }
 
-    window.onload = function() {
+    window.onload = function () {
       setCanvasHeight()
       createItem()
     }
-    window.onresize = function() {
+    window.onresize = function () {
       setCanvasHeight()
       createItem()
     }

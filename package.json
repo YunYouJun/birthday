@@ -2,13 +2,14 @@
   "name": "birthday",
   "version": "1.1.0",
   "private": true,
+  "packageManager": "pnpm@7.3.0",
   "description": "Happy Birthday To You!",
-  "license": "MIT",
   "author": {
     "email": "me@yunyoujun.cn",
     "name": "YunYouJun",
     "url": "https://www.yunyoujun.cn"
   },
+  "license": "MIT",
   "repository": "https://github.com/YunYouJun/birthday",
   "scripts": {
     "build": "cross-env NODE_ENV=production vite-ssg build",
